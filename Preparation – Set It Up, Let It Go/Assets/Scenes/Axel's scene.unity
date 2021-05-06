@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3719b58cc97af9643a855e7314e85f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 100
+  force: 300
   reseter: {fileID: 1152767613}
   maxWindup: 5
 --- !u!120 &1872567797
