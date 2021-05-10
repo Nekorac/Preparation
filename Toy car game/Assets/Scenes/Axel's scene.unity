@@ -2235,6 +2235,10 @@ MonoBehaviour:
   force: 500
   reseter: {fileID: 1939868439}
   maxWindup: 4
+  wheelL: {fileID: 1557290287}
+  wheelR: {fileID: 885726673}
+  animL: {fileID: 1557290291}
+  animR: {fileID: 885726677}
 --- !u!70 &1636608442
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2597,6 +2601,10 @@ MonoBehaviour:
   force: 500
   reseter: {fileID: 1939868439}
   maxWindup: 4
+  wheelL: {fileID: 0}
+  wheelR: {fileID: 0}
+  animL: {fileID: 0}
+  animR: {fileID: 0}
 --- !u!70 &1890498661
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
