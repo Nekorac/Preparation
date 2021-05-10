@@ -16,6 +16,10 @@ public class DragBack : MonoBehaviour
     public Reset reseter;
     float speedTimer = 0;
     [SerializeField] float maxWindup = 2f;
+    public GameObject wheelL;
+    public GameObject wheelR;
+    public Animator animL;
+    public Animator animR;
 
 
     // Start is called before the first frame update
@@ -30,6 +34,13 @@ public class DragBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!launched)
+        {
+            animL.enabled = false;
+            animR.enabled = false;
+            wheelL.transform.rotation = Quaternion.AngleAxis(100 * (startXpos - transform.position.x), Vector3.forward);
+            wheelR.transform.rotation = Quaternion.AngleAxis(100 * (startXpos - transform.position.x), Vector3.forward);
+        }
         if (grabbed)
         {
             if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < startXpos)
@@ -52,6 +63,10 @@ public class DragBack : MonoBehaviour
         if (launched)
         {
             ResetIfTooSlow();
+            animL.enabled = true;
+            animR.enabled = true;
+            animL.SetBool("Launched", true);
+            animR.SetBool("Launched", true);
         }
     }
 
