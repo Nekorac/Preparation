@@ -113,4 +113,9 @@ public class DragBack : MonoBehaviour
             grabbed = true;
         }
     }
+
+    public bool GetLaunchedBool()
+    {
+        return launched;
+    }
 }
