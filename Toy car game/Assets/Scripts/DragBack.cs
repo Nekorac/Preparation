@@ -34,6 +34,7 @@ public class DragBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!launched)
         {
             animL.enabled = false;
@@ -72,7 +73,7 @@ public class DragBack : MonoBehaviour
 
     private void ResetIfTooSlow()
     {
-        tooSlow = rb.velocity.x < 0.1f && rb.velocity.y < 0.1f;
+        tooSlow = Mathf.Abs(rb.velocity.x) < 0.1f && Mathf.Abs(rb.velocity.y) < 0.1f;
         if (tooSlow)
         {
             speedTimer += Time.deltaTime;
